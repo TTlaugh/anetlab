@@ -1,0 +1,14 @@
+acl allowed {
+	any;
+};
+options {
+	directory "/var/cache/bind";
+	recursion yes;
+	listen-on port 53 { any; };
+	allow-query { allowed; };
+	forwarders {
+		8.8.8.8;
+		1.1.1.1;
+	};
+};
+

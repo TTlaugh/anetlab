@@ -1,0 +1,13 @@
+services:
+  bind9:
+    container_name: anetlab-dns
+    image: ubuntu/bind9:latest
+    environment:
+      - BIND9_USER=root
+      - TZ=Asia/Ho_Chi_Minh
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    volumes:
+      - ./config:/etc/bind
+    restart: unless-stopped

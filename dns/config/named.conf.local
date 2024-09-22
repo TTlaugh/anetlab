@@ -1,0 +1,4 @@
+zone "anetlab.home" IN {
+    type master;
+    file "/etc/bind/zones/forward.anetlab.home";
+};

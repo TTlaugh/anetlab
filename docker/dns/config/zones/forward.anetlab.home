@@ -1,0 +1,21 @@
+$TTL 2d
+
+$ORIGIN anetlab.home.
+
+@				IN	SOA	ns.anetlab.home.	root.anetlab.home. (
+						2024190900	; serial
+						12h		; refresh
+						15m		; retry
+						3w		; expire
+						2h		; minimum ttl
+						)
+
+@				IN	A	10.0.0.10
+
+@				IN	NS	ns.anetlab.home.
+ns				IN	A	10.0.0.10
+
+@				IN	MX 10	mail.anetlab.home.
+mail				IN	A	10.0.0.10
+
+mail				IN	CNAME	mail.anetlab.home.
